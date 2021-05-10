@@ -1,0 +1,9 @@
+<div class="user__item">
+    <div class="user__id mt8">{{user.userId + 1}}</div>
+    <div class="user__name mt8">{{user.firstName}} {{user.lastName}}</div>
+    <div>
+        <router-link :to="{name: 'user', params: {id: user.userId}}">
+            <button class="btn">{{lang.seeMore}}</button>
+        </router-link>
+    </div>
+</div>

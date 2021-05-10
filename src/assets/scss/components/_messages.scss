@@ -1,0 +1,22 @@
+.msg{
+    width: 100%;
+    text-align: center;
+
+    &--error{
+        color: $err;
+    }
+    &--success{
+        color: $success;
+    }
+}
+
+h1{
+    font-size:20px;
+    text-align: center;
+
+    span{
+        font-size:20px;
+        font-weight: bold;
+        color: $primary-color;
+    }
+}

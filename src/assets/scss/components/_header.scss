@@ -1,0 +1,36 @@
+.header{
+    max-width: 100%;
+    background: $secondary-color;
+    padding: 25px 15px;
+    text-align: center;
+    color: $white;
+
+    @media screen and (max-width: $mobile){
+        padding: 15px; 
+    }
+}
+
+.logo{
+    max-width: 75px;
+    width:100%;
+    
+    @media screen and (max-width: $mobile){
+        margin: 0 auto;
+    }
+}
+
+.menu-link{
+    color: #fff;
+    text-decoration: none;
+    padding: 16px;
+    font-size: 18px;
+    display: inline-block;
+
+    &.active{
+        font-weight: bold;
+    }
+
+    @media screen and (max-width: $mobile){
+        padding: 16px 8px 8px;
+    }
+}

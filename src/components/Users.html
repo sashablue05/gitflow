@@ -1,0 +1,22 @@
+<section>
+    <div class="results">
+
+        <div v-if="!users">
+            <div class="msg mt32">{{lang.errConnect}}</div>
+        </div>
+
+        <div v-if="users && users.length >=1">
+            <div class="results__text">{{lang.results}}: <span class="results__number">{{users.length}}</span></div>
+
+            <article v-for="user in users" :key="user.userId" class="user">
+                <UserDetails :user="user"></UserDetails>
+            </article>
+        
+        </div>
+
+        <div v-else>
+            <div class="msg mt32">Cargando...</div>
+        </div>
+
+    </div>
+</section>

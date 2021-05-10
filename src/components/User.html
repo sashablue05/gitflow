@@ -1,0 +1,26 @@
+<article v-if="!err" class="user">
+    <div class="user__name user__name--center mt8">{{users.title}}: {{users.firstName}} {{users.lastName}}</div>
+    
+    <div class="user__details">
+        <div class="user__img-wrapper">
+            <img :src="users.picture" :alt="users.firstName" :title="users.firstName" class="user__img mt8" />
+        </div>
+        <div>
+            <div class="user__name mt8">{{users.login}}</div>
+            <div class="user__name mt8">
+                <a :href='"mailto:"+users.email'>{{users.email}}</a>
+            </div>
+            <div class="user__name mt8">{{users.gender}}</div>
+            <div class="user__name mt8">{{users.address}}</div>
+        </div>
+    </div>
+
+    <div class="mt64">
+        <router-link :to="{name: 'users'}">
+            <button class="btn">{{lang.back}}</button>
+        </router-link>
+    </div>
+</article>
+<div v-else>
+    <div class="user__name user__name--center mt8">{{lang.userNotFound}}</div>
+</div>
